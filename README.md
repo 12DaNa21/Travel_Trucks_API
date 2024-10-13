@@ -35,14 +35,12 @@ To run this project locally, follow these steps:
 1. Clone the repository:
    git clone [Link] (https://github.com/12DaNa21/Travel_Trucks_API.git)
 
-2. Install dependencies
+2. Install the project dependencies:
 
-````bash
-   npm install
+`npm install`
 
-3.Start the development server
-```bash
-npm run dev
+3. Start the development server:
+
+`npm run dev`
 
 ![TravelTrucks Camper](./src//helpers/images/collage.jpg)
-````
