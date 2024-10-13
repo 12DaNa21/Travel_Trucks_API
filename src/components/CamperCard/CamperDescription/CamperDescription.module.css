@@ -62,7 +62,7 @@
 
 .infoWrapper {
   display: flex;
-  /* align-items: start;
-  justify-content: center; */
+  align-items: center;
+  justify-content: space-between;
   gap: 40px;
 }

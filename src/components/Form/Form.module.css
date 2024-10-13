@@ -90,6 +90,7 @@
 }
 
 .sendBtn {
+  cursor: pointer;
   border: none;
   outline: none;
   width: fit-content;

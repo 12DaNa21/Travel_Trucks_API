@@ -12,7 +12,7 @@ export default function Photo() {
             ? data.gallery.map((item, index) => (
                 <img
                   src={item.original}
-                  alt="truck photo"
+                  alt="trucks photo"
                   key={index}
                   className={css.photo}
                 />

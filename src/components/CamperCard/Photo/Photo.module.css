@@ -6,8 +6,12 @@
 }
 
 .photo {
+  margin: 0;
+  padding: 0;
   width: calc((100% - 144px) / 4);
   height: 312px;
   object-fit: cover;
   border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
 }
