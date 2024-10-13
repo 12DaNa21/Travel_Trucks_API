@@ -1,14 +1,14 @@
-import { Oval } from "react-loader-spinner";
+import { Hourglass } from "react-loader-spinner";
 
-export default function Spiner({ width, height, color = "#d84343" }) {
+export default function Spiner({ width, height }) {
   return (
     <div>
-      <Oval
+      <Hourglass
         visible={true}
         height={width}
         width={height}
-        color={color}
-        ariaLabel="oval-loading"
+        colors={["#e44848", "#ffc531"]}
+        ariaLabel="hourglass-loading"
         wrapperStyle={{}}
         wrapperClass=""
       />
