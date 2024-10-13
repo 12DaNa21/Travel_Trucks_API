@@ -23,3 +23,23 @@ img {
   display: block;
   max-width: 100%;
 }
+
+body {
+  background: var(--White);
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  --White: #ffffff;
+  --Black: #101828;
+  --Gray-dark: #475467;
+  --Gray: #6c717b;
+  --Gray-light: #dadde1;
+  --Buttons: #e44848;
+  --Hover: #d84343;
+  --Inputs: #f7f7f7;
+  --Raiting: #ffc531;
+  --Fields: #f2f4f7;
+}
