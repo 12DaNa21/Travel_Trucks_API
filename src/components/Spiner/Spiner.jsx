@@ -1,6 +1,6 @@
 import { Oval } from "react-loader-spinner";
 
-export default function Spiner({ width, height, color = "#475467" }) {
+export default function Spiner({ width, height, color = "#d84343" }) {
   return (
     <div>
       <Oval
