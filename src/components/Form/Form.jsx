@@ -122,6 +122,7 @@ export default function Form() {
             onChange={handleDateChange}
             showSelectionPreview={true}
             moveRangeOnFirstSelection={false}
+            minDate={new Date()}
             ranges={[
               {
                 startDate: formState.startDate,
