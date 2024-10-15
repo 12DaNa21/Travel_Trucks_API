@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import css from "./Form.module.css";
 import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css";
@@ -15,6 +15,8 @@ export default function Form() {
     comment: "",
   });
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
+
+  const datePickerRef = useRef(null);
 
   const toggleDatePicker = () => {
     setIsDatePickerOpen((prevState) => !prevState);
@@ -57,6 +59,27 @@ export default function Form() {
     });
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        datePickerRef.current &&
+        !datePickerRef.current.contains(event.target)
+      ) {
+        setIsDatePickerOpen(false);
+      }
+    };
+
+    if (isDatePickerOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDatePickerOpen]);
+
   return (
     <form className={css.form} onSubmit={handleSendForm}>
       <h2 className={css.title}>Book your campervan now</h2>
@@ -94,7 +117,7 @@ export default function Form() {
         readOnly
       />
       {isDatePickerOpen && (
-        <div className={css.dataPickew}>
+        <div className={css.dataPicker} ref={datePickerRef}>
           <DateRangePicker
             onChange={handleDateChange}
             showSelectionPreview={true}
