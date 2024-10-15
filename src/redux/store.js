@@ -17,7 +17,7 @@ import storage from "redux-persist/lib/storage";
 const favoritePersistConfig = {
   key: "favorite",
   storage,
-  whitelist: [""],
+  whitelist: ["favoriteList"],
 };
 
 const persistedFavoriteReducer = persistReducer(
